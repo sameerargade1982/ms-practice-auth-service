@@ -1,0 +1,30 @@
+server:
+  port: 5556
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+#server:
+#  contextPath:   /auth
+
+# MySQL database connection strings
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ms_auth_service
+    username: root
+    password: admin	
+
+
+#jpa.properties.hibernate.show_sql=true
