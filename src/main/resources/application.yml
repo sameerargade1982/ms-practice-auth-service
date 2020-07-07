@@ -1,12 +1,15 @@
 server:
   port: 5556
+  contextPath: /
 #Setting the logging levels for the service
 logging:
   level:
     com.netflix: WARN
     org.springframework.web: WARN
     com.thoughtmechanix: DEBUG
-
+    org:
+      springframework:
+        security: DEBUG
 eureka:
   instance:
     preferIpAddress: true
@@ -25,6 +28,10 @@ spring:
     url: jdbc:mysql://localhost:3306/ms_auth_service
     username: root
     password: admin	
+    
+security:
+  basic:
+    enabled: false
 
 
 #jpa.properties.hibernate.show_sql=true
